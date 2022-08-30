@@ -38,10 +38,9 @@ private HashMap<Integer, Double> fullATM;
 	}
 	public boolean withdrawMoney (int accountNumber, double withdraw)
 	{
-		double current = fullATM.get(accountNumber);
-		if (fullATM.containsKey(accountNumber) && current-withdraw >= 0)
+		if (fullATM.containsKey(accountNumber) && fullATM.get(accountNumber)-withdraw >= 0 && withdraw >= 0)
 		{
-			fullATM.replace(accountNumber, current-withdraw);
+			fullATM.replace(accountNumber, fullATM.get(accountNumber)-withdraw);
 			return true;
 		}
 		return false;

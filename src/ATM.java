@@ -1,11 +1,9 @@
 import java.util.*;
 public class ATM {
 private HashMap<Integer, Double> fullATM;
-private int accountNum;
 
 	public ATM() {
 		 fullATM = new HashMap<Integer, Double>();
-		 
 	}
 	
 	public void openAccount(int accountNumber)
@@ -52,6 +50,8 @@ private int accountNum;
 	
 	public static void main (String [] args)
 	{
-		
+		ATM atm1 = new ATM();
+		atm1.openAccount(1, 11);
+		System.out.println (atm1.checkBalance(1));
 	}
 }

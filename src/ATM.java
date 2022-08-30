@@ -1,9 +1,14 @@
 import java.util.*;
+import java.text.NumberFormat;
+import java.text.DecimalFormat;
+
 public class ATM {
 private HashMap<Integer, Double> fullATM;
 
+NumberFormat rounder = new DecimalFormat("0.0");
 	public ATM() {
-		 fullATM = new HashMap<Integer, Double>();
+		
+		fullATM = new HashMap<Integer, Double>();
 	}
 	
 	public void openAccount(int accountNumber)
@@ -21,9 +26,11 @@ private HashMap<Integer, Double> fullATM;
 	}
 	public double checkBalance (int accountNumber)
 	{
+		Double current = fullATM.get(accountNumber);
 		if (fullATM.containsKey(accountNumber))
 		{
-			return fullATM.get(accountNumber);
+			current = Double.parseDouble(rounder.format(current));
+			return current;
 		}
 		return 0.0;
 	}

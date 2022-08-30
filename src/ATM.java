@@ -51,7 +51,17 @@ private HashMap<Integer, Double> fullATM;
 	public static void main (String [] args)
 	{
 		ATM atm1 = new ATM();
+		//checking check balance
 		atm1.openAccount(1, 11);
+		System.out.println (atm1.checkBalance(1));
+		
+		System.out.println(atm1.depositMoney(1, 20));
+		System.out.println (atm1.checkBalance(1));
+		
+		System.out.println(atm1.withdrawMoney(1, 9));
+		System.out.println (atm1.checkBalance(1));
+		
+		System.out.println(atm1.withdrawMoney(1, 30));
 		System.out.println (atm1.checkBalance(1));
 	}
 }

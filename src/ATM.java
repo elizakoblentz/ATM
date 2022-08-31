@@ -5,7 +5,11 @@ import java.text.DecimalFormat;
 public class ATM {
 private HashMap<Integer, Double> fullATM;
 
+<<<<<<< HEAD
 NumberFormat rounder = new DecimalFormat("0.00");
+=======
+NumberFormat rounder = new DecimalFormat("0.0");
+>>>>>>> main
 	public ATM() {
 		
 		fullATM = new HashMap<Integer, Double>();

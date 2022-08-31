@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class ATM {
 private HashMap<Integer, Double> fullATM;
 
-NumberFormat rounder = new DecimalFormat("0.0");
+NumberFormat rounder = new DecimalFormat("0.00");
 	public ATM() {
 		
 		fullATM = new HashMap<Integer, Double>();
@@ -74,6 +74,7 @@ NumberFormat rounder = new DecimalFormat("0.0");
 		
 		atm1.closeAccount(1);
 		System.out.println(atm1.checkBalance(1));
+		System.out.println(atm1.depositMoney(1, 20));
 		
 		System.out.println ("\n\n");
 		
